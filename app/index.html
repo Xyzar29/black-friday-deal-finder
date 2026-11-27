@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>DealHound — Black Friday 2026 Deal Finder</title>
+  <meta name="description" content="33 real Black Friday 2026 deals, each price-checked on 27 November 2026 at its store, with an honest verdict on whether it is really a deal.">
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <header class="hero">
+    <p class="eyebrow">Black Friday &middot; 27 November 2026</p>
+    <h1>Deal<span class="hound">Hound</span></h1>
+    <p class="tagline">Real Black Friday deals, price-checked today at the store — with an honest verdict on each one: new low, strong deal, fair deal, or just a routine sale.</p>
+    <div class="stats">
+      <span><b>33</b> deals checked</span>
+      <span><b>4</b> stores</span>
+      <span><b>7</b> categories</span>
+      <span><b>$9,092</b> total savings listed</span>
+    </div>
+  </header>
+
+  <main>
+    <section class="controls" aria-label="Search and filter deals">
+      <div class="control grow">
+        <label for="search">Search deals</label>
+        <input id="search" type="search" placeholder="Try &ldquo;TV&rdquo;, &ldquo;AirPods&rdquo;, &ldquo;Dyson&rdquo;&hellip;" autocomplete="off">
+      </div>
+      <div class="control">
+        <label for="category">Category</label>
+        <select id="category"></select>
+      </div>
+      <div class="control">
+        <label for="store">Store</label>
+        <select id="store"></select>
+      </div>
+      <div class="control">
+        <label for="discount">Min. discount</label>
+        <select id="discount">
+          <option value="0">Any discount</option>
+          <option value="25">25% off or more</option>
+          <option value="40">40% off or more</option>
+          <option value="50">50% off or more</option>
+        </select>
+      </div>
+      <div class="control">
+        <label for="verdict">Verdict</label>
+        <select id="verdict">
+          <option value="All">Any verdict</option>
+          <option value="NEW LOW">New low</option>
+          <option value="STRONG">Strong deal</option>
+          <option value="FAIR">Fair deal</option>
+          <option value="ROUTINE">Routine sale</option>
+        </select>
+      </div>
+      <div class="control">
+        <label for="sort">Sort by</label>
+        <select id="sort">
+          <option value="best-deal">Best deal first</option>
+          <option value="biggest-discount">Biggest % discount</option>
+          <option value="biggest-saving">Biggest $ saving</option>
+          <option value="price-low">Lowest price</option>
+          <option value="price-high">Highest price</option>
+        </select>
+      </div>
+    </section>
+
+    <div class="result-line">
+      <span id="result-count">Showing all 33 deals</span>
+      <span id="stats-line"></span>
+    </div>
+
+    <section id="deal-grid" class="grid" aria-live="polite"></section>
+
+    <section class="method">
+      <h2>How every deal was checked</h2>
+      <p id="checked-note"></p>
+      <ul>
+        <li><strong>New low</strong> — a source calls it the lowest or record price for that product.</li>
+        <li><strong>Strong deal</strong> — 40% or more off the usual price.</li>
+        <li><strong>Fair deal</strong> — 20–39% off; a real cut, not a record.</li>
+        <li><strong>Routine sale</strong> — under 20% off. We list these too, so you can see what is not worth rushing for.</li>
+      </ul>
+      <p>Each deal names the store, the sale window, and the source that showed the price. The store link opens that store's search for the exact product name, so the matching listing is the first result. Deals that no store or deals source showed were not listed.</p>
+    </section>
+  </main>
+
+  <footer>
+    DealHound &middot; Black Friday 2026 &middot; Prices verified 27 November 2026. Prices move during the sale — always confirm the price at checkout.
+  </footer>
+
+  <div id="modal" class="modal" hidden>
+    <div id="modal-box"></div>
+  </div>
+
+  <script type="module" src="./main.js"></script>
+</body>
+</html>
